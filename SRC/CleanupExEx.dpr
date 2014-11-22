@@ -31,7 +31,7 @@ const
   PLUGIN_VERS: PWChar = '201.01';
   PLUGIN_AUTH: PWChar = 'quygia128';
   PLUGIN_SITE: PWChar = 'http://cin1team.biz';
-  PLUGIN_BLOG: PWChar = 'http://quygia128.blogspot.com';
+  PLUGIN_BLOG: PWChar = 'http://crackertool.blogspot.com';
   PLUGIN_DATE: PWChar = '11.25.2013';
 
   DEL_ALL: LongInt = 1;
@@ -168,7 +168,7 @@ var
   OD2Dir: string;
   i: LongInt;
 begin
-  OD2Dir:= PAnsiChar(WideToStr(@oddata.ollyfile^));
+  OD2Dir:= PAnsiChar(WideToStr(ollyfile^));
   for i:= lstrlenA(PAnsiChar(OD2Dir)) downto 1 do begin
     if OD2Dir[i] <> '.' then OD2Dir[i]:= #0
     else begin
@@ -185,7 +185,7 @@ var
   oddir: PAnsiChar;
 begin
   Result:= nil;
-  oddir:= PChar(WideToStr(@oddata.plugindir^));
+  oddir:= PChar(WideToStr(plugindir^));
   for i:= lstrlenA(oddir) downto 1 do begin
     if oddir[i] <> '\' then oddir[i]:= #0
     else begin
